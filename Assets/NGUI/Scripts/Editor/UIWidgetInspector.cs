@@ -751,7 +751,7 @@ public class UIWidgetInspector : Editor
 
 	public override void OnInspectorGUI ()
 	{
-		EditorGUIUtility.LookLikeControls(80f);
+		RebasedEditorGUIUtility.LookLikeControls(80f);
 		EditorGUILayout.Space();
 
 		// Check to see if we can draw the widget's default properties to begin with

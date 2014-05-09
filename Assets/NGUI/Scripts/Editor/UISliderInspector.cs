@@ -42,7 +42,7 @@ public class UISliderInspector : Editor
 
 	public override void OnInspectorGUI ()
 	{
-		EditorGUIUtility.LookLikeControls(80f);
+		RebasedEditorGUIUtility.LookLikeControls(80f);
 		UISlider slider = target as UISlider;
 
 		NGUIEditorTools.DrawSeparator();

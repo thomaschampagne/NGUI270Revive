@@ -11,7 +11,7 @@ public class UIScrollBarInspector : Editor
 {
 	public override void OnInspectorGUI ()
 	{
-		EditorGUIUtility.LookLikeControls(80f);
+		RebasedEditorGUIUtility.LookLikeControls(80f);
 		UIScrollBar sb = target as UIScrollBar;
 
 		NGUIEditorTools.DrawSeparator();

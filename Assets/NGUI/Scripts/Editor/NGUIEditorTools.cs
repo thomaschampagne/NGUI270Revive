@@ -644,13 +644,13 @@ public class NGUIEditorTools
 			GUILayout.Label(prefix, GUILayout.Width(74f));
 		}
 
-		EditorGUIUtility.LookLikeControls(48f);
+		RebasedEditorGUIUtility.LookLikeControls(48f);
 
 		IntVector retVal;
 		retVal.x = EditorGUILayout.IntField(leftCaption, x, GUILayout.MinWidth(30f));
 		retVal.y = EditorGUILayout.IntField(rightCaption, y, GUILayout.MinWidth(30f));
 
-		EditorGUIUtility.LookLikeControls(80f);
+		RebasedEditorGUIUtility.LookLikeControls(80f);
 
 		GUILayout.EndHorizontal();
 		return retVal;
@@ -693,21 +693,17 @@ public class NGUIEditorTools
 	/// <summary>
 	/// Create an undo point for the specified objects.
 	/// </summary>
-
 	static public void RegisterUndo (string name, params Object[] objects)
 	{
+		
 		if (objects != null && objects.Length > 0)
 		{
 			foreach (Object obj in objects)
 			{
 				if (obj == null) continue;
-				Undo.RegisterUndo(obj, name);
+				RebasedUndo.RegisterUndo(obj, name);
 				EditorUtility.SetDirty(obj);
 			}
-		}
-		else
-		{
-			Undo.RegisterSceneUndo(name);
 		}
 	}
 
@@ -1024,7 +1020,7 @@ public class NGUIEditorTools
 		{
 			if (!NGUIEditorTools.IsUniform(t.localScale))
 			{
-				Undo.RegisterUndo(t, "Uniform scaling fix");
+				RebasedUndo.RegisterUndo(t, "Uniform scaling fix");
 				t.localScale = Vector3.one;
 				EditorUtility.SetDirty(t);
 			}
@@ -1034,15 +1030,27 @@ public class NGUIEditorTools
 
 	/// <summary>
 	/// Draw a distinctly different looking header label
+	/// Force On is Disabled
 	/// </summary>
-
-	static public bool DrawHeader (string text, bool forceOn = false) { return DrawHeader(text, text, forceOn); }
+	static public bool DrawHeader (string text) { return DrawHeader(text, text, false); }
 
 	/// <summary>
 	/// Draw a distinctly different looking header label
 	/// </summary>
+	static public bool DrawHeader (string text, bool forceOn) { return DrawHeader(text, text, forceOn); }
 
-	static public bool DrawHeader (string text, string key, bool forceOn = false)
+	/// <summary>
+	/// Draw a distinctly different looking header label
+	/// Force On is Disabled
+	/// </summary>
+	static public bool DrawHeader (string text, string key) {
+		return DrawHeader (text, key, false);
+	}
+
+	/// <summary>
+	/// Draw a distinctly different looking header label
+	/// </summary>
+	static public bool DrawHeader (string text, string key, bool forceOn)
 	{
 		bool state = EditorPrefs.GetBool(key, true);
 
