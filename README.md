@@ -1,2 +1,2 @@
-NGUI270_Remastered
+NGUI270 Revive
 ==================
