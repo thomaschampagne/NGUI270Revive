@@ -11,7 +11,7 @@ NGUI270Revive
 
 > Download the .unitypackage here: https://github.com/thomaschampagne/NGUI270Revive/releases
 
-Official note about NGUI 2 cycle 
+Officials notes about NGUI 2 cycle 
 ==================
 
 "NGUI 2.7.0, the last of NGUI 2 cycle is now free and can be downloaded here (www.tasharen.com). It’s dated September 2012, and comes in full source code form and without any kind of DRM. It’s feature-limited and not nearly as streamlined as the current NGUI 3-based releases, and doesn’t come with support — but if you can’t afford NGUI 3 or just want to try it, you’re welcome to grab it."
