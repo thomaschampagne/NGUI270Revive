@@ -5,7 +5,7 @@ NGUI270Revive at a glance
 
 2. Works with Unity3d 4.3.4f1.
 
-3. No ERRORS or WARNINGS comming from deprecated methods initiated by Unity3d upgrades.
+3. No ERRORS or WARNINGS coming from deprecated methods initiated by Unity3d upgrades.
 
 4. Expect to support newest Unity3d versions.
 
