@@ -1,4 +1,4 @@
-NGUI270Revive
+NGUI270Revive at a glance
 ==================
 
 1. Unofficial support of NGUI 2.7.0 which has been discontinuited on September 2012 by Tasharen.
