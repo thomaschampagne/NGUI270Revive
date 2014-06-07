@@ -3,7 +3,7 @@ NGUI270Revive at a glance
 
 1. Unofficial support of NGUI 2.7.0. Official support has been discontinuited on September 2012 by Tasharen Company.
 
-2. Works with Unity3d 4.3.4f1.
+2. Works with latest Unity3d 4.5.0f6 (on June 2014).
 
 3. No ERRORS or WARNINGS coming from deprecated methods initiated by Unity3d upgrades.
 
